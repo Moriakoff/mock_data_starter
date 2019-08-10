@@ -1,4 +1,4 @@
-package mock.data.starter.Processor;
+package mock.data.starter.processor;
 
 import com.github.javafaker.Faker;
 import mock.data.starter.annotation.InjectRandomValue;
