@@ -1,10 +1,8 @@
 package mock.data.starter.handler;
 
 import com.github.javafaker.Faker;
-import mock.data.starter.model.AddressType;
-import org.springframework.stereotype.Component;
+import mock.data.starter.type.RandomDataAddressType;
 
-@Component
 public class InjectRandomValueCityHandler implements InjectRandomValueHandler {
 
     private final Faker faker;
@@ -14,8 +12,8 @@ public class InjectRandomValueCityHandler implements InjectRandomValueHandler {
     }
 
     @Override
-    public AddressType getType() {
-        return AddressType.CITY;
+    public RandomDataAddressType getType() {
+        return RandomDataAddressType.CITY;
     }
 
     @Override

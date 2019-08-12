@@ -1,10 +1,11 @@
 package mock.data.starter.handler;
 
-import mock.data.starter.model.AddressType;
+import mock.data.starter.type.RandomDataType;
+
 
 public interface InjectRandomValueHandler {
 
-    AddressType getType();
+    RandomDataType getType();
 
     String getRandomValue();
 
