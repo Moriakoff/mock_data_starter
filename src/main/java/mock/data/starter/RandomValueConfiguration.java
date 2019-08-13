@@ -1,12 +1,11 @@
 package mock.data.starter;
 
 import com.github.javafaker.Faker;
-import mock.data.starter.annotation.ConditionalOnPropertyEnable;
-import mock.data.starter.annotation.OnPropertyEnableCondition;
 import mock.data.starter.annotation.RandomValueProperties;
 import mock.data.starter.handler.*;
 import mock.data.starter.processor.InjectRandomValueAnnotationBeanPostProcessor;
 import mock.data.starter.type.RandomDataType;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -57,7 +56,7 @@ public class RandomValueConfiguration {
     }
 
     @Bean
-    @ConditionalOnPropertyEnable
+    @ConditionalOnProperty(value = "condition.enable",havingValue = "true")
     public InjectRandomValueAnnotationBeanPostProcessor annotationBeanPostProcessor() {
         return new InjectRandomValueAnnotationBeanPostProcessor();
     }
